@@ -1,0 +1,135 @@
+.head .logo img {
+  cursor: pointer;
+  width: 40rem;
+  object-fit: cover;
+}
+.head .ad {
+  cursor: pointer;
+}
+
+header {
+  background-color: #c45048;
+  color: #fff;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+}
+
+header li {
+  margin-right: 3rem;
+}
+
+header li a {
+  padding-bottom: 0.5rem;
+  color: #fff;
+  transition: 0.5;
+  cursor: pointer;
+}
+
+header li a::after {
+  content: "";
+  width: 0;
+  height: 0.3rem;
+  margin: 0 auto;
+  display: block;
+
+  background-color: #235185;
+  transition: width 0.3s ease;
+}
+
+header li a:hover::after {
+  width: 100%;
+}
+
+header .searchButton a {
+  color: #fff;
+  cursor: pointer;
+  transition: 0.5;
+}
+
+header .searchButton a::after {
+  content: "";
+  width: 0;
+  height: 0.3rem;
+  margin: 0 auto;
+  display: block;
+
+  background-color: #235185;
+  transition: width 0.3s ease;
+}
+
+header .searchButton a:hover::after {
+  width: 100%;
+}
+
+.barIco {
+  font-size: 2.5rem;
+  display: none;
+  background: none;
+  color: #fff;
+  border: none;
+}
+
+header .barIco:hover {
+  color: #235185;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1000px) {
+  .head .ad {
+    display: none;
+  }
+
+  .head .logo img {
+    width: 35rem;
+    object-fit: contain;
+  }
+
+  header .icon {
+    display: none;
+  }
+  header .flex {
+    display: none;
+  }
+
+  .barIco {
+    display: block;
+  }
+
+  header .navbar {
+    width: 100%;
+    height: 73vh;
+
+    padding: 2rem 5rem;
+
+    display: block;
+    position: absolute;
+    top: 25.5rem !important;
+    left: 0;
+    z-index: 5;
+
+    text-align: center;
+    background-color: #235185;
+  }
+
+  header li a::after {
+    content: "";
+    width: 0;
+    height: 0.3rem;
+    margin: 0 auto;
+    display: block;
+
+    background-color: #c45048;
+    transition: width 0.3s ease;
+  }
+
+  header li a:hover::after {
+    width: 10rem;
+  }
+
+  header ul li {
+    margin-bottom: 3rem;
+  }
+}
