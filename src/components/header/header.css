@@ -1,8 +1,10 @@
+/* === GERAL === */
 .head .logo img {
   cursor: pointer;
-  width: 40rem;
+  width: 8rem;
   object-fit: cover;
 }
+
 .head .ad {
   cursor: pointer;
 }
@@ -15,6 +17,8 @@ header {
 header .container {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 header li {
@@ -24,7 +28,7 @@ header li {
 header li a {
   padding-bottom: 0.5rem;
   color: #fff;
-  transition: 0.5;
+  transition: 0.5s;
   cursor: pointer;
 }
 
@@ -34,7 +38,6 @@ header li a::after {
   height: 0.3rem;
   margin: 0 auto;
   display: block;
-
   background-color: #235185;
   transition: width 0.3s ease;
 }
@@ -46,7 +49,7 @@ header li a:hover::after {
 header .searchButton a {
   color: #fff;
   cursor: pointer;
-  transition: 0.5;
+  transition: 0.5s;
 }
 
 header .searchButton a::after {
@@ -55,7 +58,6 @@ header .searchButton a::after {
   height: 0.3rem;
   margin: 0 auto;
   display: block;
-
   background-color: #235185;
   transition: width 0.3s ease;
 }
@@ -77,19 +79,34 @@ header .barIco:hover {
   cursor: pointer;
 }
 
-@media screen and (max-width: 1000px) {
+/* === RESPONSIVO ATÉ 991px === */
+@media screen and (max-width: 991px) {
   .head .ad {
     display: none;
   }
 
+  .head .logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+  }
+
   .head .logo img {
-    width: 35rem;
+    width: 20rem;
+    height: auto;
     object-fit: contain;
+  }
+
+  .header-banner {
+    display: none;
   }
 
   header .icon {
     display: none;
   }
+
   header .flex {
     display: none;
   }
@@ -100,36 +117,45 @@ header .barIco:hover {
 
   header .navbar {
     width: 100%;
-    height: 73vh;
-
-    padding: 2rem 5rem;
-
+    height: auto;
+    padding: 2rem;
     display: block;
     position: absolute;
-    top: 25.5rem !important;
+    top: 100%;
     left: 0;
-    z-index: 5;
-
+    z-index: 10;
     text-align: center;
     background-color: #235185;
   }
 
   header li a::after {
-    content: "";
-    width: 0;
-    height: 0.3rem;
-    margin: 0 auto;
-    display: block;
-
     background-color: #c45048;
-    transition: width 0.3s ease;
   }
 
   header li a:hover::after {
-    width: 10rem;
+    width: 100%;
   }
 
   header ul li {
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
+  }
+}
+
+/* === RESPONSIVO ATÉ 600px === */
+@media screen and (max-width: 600px) {
+  .head .logo img {
+    width: 16rem;
+  }
+
+  header .navbar {
+    padding: 1rem 2rem;
+  }
+
+  header ul li {
+    margin-bottom: 1.5rem;
+  }
+
+  .barIco {
+    font-size: 2rem;
   }
 }
