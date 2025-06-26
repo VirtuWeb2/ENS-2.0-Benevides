@@ -21,9 +21,9 @@ const Card = ({ item: { id, cover, cat, title, date, link } }) => {
             <h1 className="titleBg">{title}</h1>
           </Link>
           <div className="author flex">
-            <span style={{ cursor: "auto" }}>
+            {/*     <span style={{ cursor: "auto" }}>
               {moment(date).format("DD-MM-YYYY")}
-            </span>
+            </span>  */}
           </div>
         </div>
       </div>
