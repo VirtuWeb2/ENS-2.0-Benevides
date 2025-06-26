@@ -84,9 +84,9 @@ const Noticia = () => {
                 <p>
                   {item.muni} | {item.cat}
                 </p>
-                <p> postado no dia: </p>
+                {/* <p> postado no dia: </p>
                 <label>{moment(item.date).format("DD-MM-YYYY")}</label>
-              </div>
+              </div>  */}
 
               <div className="social">
                 {ShareSocial.map((link) => (
